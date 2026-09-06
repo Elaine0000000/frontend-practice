@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    color: #1900ffe0;
+    line-height: 1.6;
+    background-color: #d81701;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    margin: 16px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fbea02;
+    margin: 0 8px;
+}
+
+section {
+    background-color: #00cf15;
+    boeder: 1px solid #fee102;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+input, textarea, select, button {
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: #ff0284;
+    color: #008600;
+    border: none;
+    padding: 8px 24px;
+}
+footer {
+  text-align: center;
+  color: #cdcbcb;
+  font-size: 14px;
+}
