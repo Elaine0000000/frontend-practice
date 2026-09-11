@@ -14,6 +14,10 @@ const gradeCount = (list) => {
     const user = s.name;
     const grade = s.grade;
 
+    if (!result[user].total ){
+    result[user].total = 0;
+    }result[user].total++;
+
     if (!result[user][grade]){
     result[user][grade] = 0;
     }
@@ -21,5 +25,11 @@ const gradeCount = (list) => {
     return result;
     }, {'用户1': {}, '用户2': {}});
 };//统计每个用户不同等级结果数量。
+const report = (list) => {
+  const valid = cleanScores(list);
+  if (valid.length === 0) {
+    return '没有有效数据';
+  }
+}
 console.log('清洗后:', cleanScores(scores));
 console.log('统计:',gradeCount(scores));
