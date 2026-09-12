@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
@@ -19,6 +19,11 @@
   <form id="add-form">
     <input type="text" id="task-input" placeholder="要做什么？">
     <button type="submit">添加</button>
+    <div class="filters">
+    <button data-filter="all">全部</button>
+    <button data-filter="active">未完成</button>
+    <button data-filter="done">已完成</button>
+  </div>
   </form>
   <p class="tip" id="tip"></p>
   <ul id="task-list"></ul>
