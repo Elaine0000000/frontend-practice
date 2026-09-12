@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>读书清单</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: sans-serif; max-width: 480px; margin: 24px auto; padding: 0 16px; }
+    li.done { text-decoration: line-through; color: #c50000; }
+    .del { margin-left: 12px; cursor: pointer; }
+    .tip { color: #c00; font-size: 14px; min-height: 20px; }
+    .filters { margin: 12px 0; }
+    .filters button { margin-right: 8px; }
+    #task-list {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0;
+    }
+    .card {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+    }
+    .card.done .card-title {
+      text-decoration: line-through;
+      color: #c50000;
+    }
+    .card-title { flex: 1; }
+    .card-btn {
+      padding: 4px 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #f7f7f7;
+      cursor: pointer;
+    }
+    .card-btn:hover { background: #eee; }
+  </style>
+</head>
+<body>
+  <h1>阅读清单</h1>
+  <form id="add-form">
+    <input type="text" id="task-input" placeholder="是什么书？">
+    <button id="add-card">添加卡片</button>
+  </form>
+  <div class="filters">
+  <button data-filter="all">全部</button>
+  <button data-filter="active">未完成</button>
+  <button data-filter="done">已完成</button>
+</div>
+  <p class="tip" id="tip"></p>
+  <ul id="task-list"></ul>
+  <script src="book.js"></script>
+</body>
+</html>
