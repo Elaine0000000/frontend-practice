@@ -6,10 +6,10 @@
   <title>读书清单</title>
   <style>
     * { box-sizing: border-box; }
-    body { font-family: sans-serif; max-width: 480px; margin: 24px auto; padding: 0 16px; }
-    li.done { text-decoration: line-through; color: #c50000c2; }
+    body { font-family: sans-serif; max-width: 480px; margin: 24px auto; padding: 0 16px;background: #0d0d0d;color: #fd0202; }
+    li.done { text-decoration: line-through; color: #fe0202c2; }
     .del { margin-left: 12px; cursor: pointer; }
-    .tip { color: #c00; font-size: 14px; min-height: 20px; }
+    .tip { color: rgb(252, 0, 0); font-size: 14px; min-height: 20px; }
     .filters { margin: 12px 0; }
     .filters button { margin-right: 8px; }
     #task-list {
@@ -17,35 +17,48 @@
       padding: 0;
       margin: 12px 0;
     }
+    #add-form input {
+      background: #a00000;
+      color: #040000;
+      border: 1px solid #f3f0f0;
+      padding: 6px 10px;
+      border-radius: 6px;
+      outline: none;
+      width: 400px;        
+      height: 40px;        
+      font-size: 16px;     
+}
+
     .card {
       display: flex;
       align-items: center;
       gap: 8px;
       padding: 10px 12px;
       margin-bottom: 8px;
-      border: 1px solid #ddd;
+      border: 1px solid #0d0d0d;
       border-radius: 8px;
-      background: #013078;
+      background: #1001e9;
     }
     .card.done .card-title {
       text-decoration: line-through;
-      color: #c50000;
+      color: #02ffd1;
     }
     .card-title { flex: 1; }
     .card-btn {
       padding: 4px 10px;
-      border: 1px solid #ccc;
+      border: 1px solid #8cb1ca;
       border-radius: 6px;
-      background: #b3ced9;
+      background: #e00101;
+      color: #01a8b4f0;
       cursor: pointer;
     }
-    .card-btn:hover { background: #008484; }
+    .card-btn:hover { background: #00d7da; }
   </style>
 </head>
 <body>
   <h1>阅读清单</h1>
   <form id="add-form">
-    <input type="text" id="task-input" placeholder="是什么书？">
+    <input type="text" id="task-input" placeholder="这里输入也没用，只是我的界面很炫酷。">
     <button id="add-card">添加卡片</button>
   </form>
   <div class="filters">
