@@ -1,0 +1,14 @@
+{
+  "title": "饮料消费记录",
+  "months": ["六月", "七月", "八月", "九月"],
+  "series": [
+    { "category": "蜜雪冰城", "counts": [10,12,5,6] },
+    { "category": "瑞幸", "counts": [6,8,3,5] },
+    { "category": "益禾堂", "counts": [15,3,1,5] },
+    { "category": "一点点", "counts": [2,1,12,5] },
+    { "category": "茶颜悦色", "counts": [1,2,1,1] },
+    { "category": "东方墨兰", "counts": [1,2,6,0] },
+    { "category": "上山喝茶", "counts": [3,1,0,1] },
+    { "category": "霸王茶姬", "counts": [2,4,1,3] }
+  ]
+}
