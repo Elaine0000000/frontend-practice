@@ -41,9 +41,20 @@ const sphereMaterial = new THREE.MeshStandardMaterial({
 const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
 scene.add(sphere);
 
+const orbitGroup = new THREE.Group();
+const orbitSphere = new THREE.Mesh(
+    new THREE.SphereGeometry(0.2, 32, 32),
+    new THREE.MeshStandardMaterial({ color: 0x00aaff })
+);
+orbitSphere.position.set(4, 0, 0);
+orbitGroup.add(orbitSphere);
+scene.add(orbitGroup);
+
+
 const animate = () => {
   requestAnimationFrame(animate);
   sphere.rotation.y += 0.005;
+  orbitGroup.rotation.y += 0.02;
   renderer.render(scene, camera);
 };
 animate();
