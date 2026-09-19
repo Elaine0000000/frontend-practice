@@ -4,6 +4,65 @@
   border-radius: 8px;
   padding: 8px;
 }
+body {
+  background-color: #bbe0df;
+  color: #3b3228;
+  font-family: "Microsoft YaHei", sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  background-color: #d2eac5 !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #7e4e1e !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #7b4a38 !important;
+}
+
+main {
+  padding: 20px 0;
+}
+
+.card {
+  border: 1px solid #b8ecd4;
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+.list-group-item {
+  background-color: #ffffff;
+  border: 1px solid #b2d9b8;
+  border-left: 4px solid #6d4c41;
+  margin-bottom: 6px;
+  border-radius: 4px;
+}
+
+.list-group-item:hover {
+  background-color: #57526f;
+}
+
+.form-select,
+.form-control {
+  border: 1px solid #a5d6a7;
+}
+
+.form-select:focus,
+.form-control:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.2);
+}
+
+footer {
+  color: #6d4c41;
+  border-top: 1px solid #cee8c4;
+  margin-top: 30px;
+}
 
 #room-list li {
   display: flex;

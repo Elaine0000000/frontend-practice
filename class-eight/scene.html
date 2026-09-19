@@ -7,19 +7,21 @@
     body { margin: 0; }
     .back {
       position: fixed; top: 12px; left: 12px; z-index: 9;
-      background: #fff; padding: 6px 14px; border-radius: 6px;
-      text-decoration: none; color: #0d6efd; font-family: sans-serif;
+      background: #fccaca; padding: 6px 14px; border-radius: 6px;
+      text-decoration: none; color: #cdf601; font-family: sans-serif;
     }
   </style>
 </head>
 <body>
   <a class="back" href="index.html">← 返回首页</a>
+  <a class="nav-link" href="rooms.html">自习室</a>
+  <a class="nav-link" href="stats.html">使用统计</a>
   <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/controls/OrbitControls.js"></script>
   <script>
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x223354);
-    scene.fog = new THREE.Fog(0x223354, 14, 30);
+    scene.fog = new THREE.Fog(0xff0000, 16, 60);
 
     const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
     camera.position.set(7, 5, 9);
@@ -41,6 +43,38 @@
     );
     ground.rotation.x = -Math.PI / 2;
     scene.add(ground);
+
+    function createChair() {
+    const chair = new THREE.Group();
+    const woodMaterial = new THREE.MeshStandardMaterial({ color: 0x8b5a2b });
+
+    const seat = new THREE.Mesh(new THREE.BoxGeometry(0.5, 0.05, 0.5), woodMaterial);
+    seat.position.y = 0.5;
+    chair.add(seat);
+
+    const back = new THREE.Mesh(new THREE.BoxGeometry(0.5, 0.5, 0.05), woodMaterial);
+    back.position.set(0, 1, -0.45);
+    chair.add(back);
+    const legPositions = [
+      [-0.2, 0.1, -0.2], [0.2, 0.1, -0.2],
+      [-0.2, 0.1, 0.2],  [0.2, 0.1, 0.2]
+    ];
+    legPositions.forEach(pos => {
+      const leg = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.5, 0.1), woodMaterial);
+      leg.position.set(...pos);
+      chair.add(leg);
+    });
+    return chair;
+  }
+   const rows = 20;
+   const cols = 20; 
+   for (let r = 0; r < rows; r++) {
+     for (let c = 0; c < cols; c++) {
+     const chair = createChair();
+     chair.position.set(c * 1.5 - (cols - 1) * 0.75, 0, r * 1.5 - (rows - 1) * 0.75);
+     scene.add(chair);
+    }
+  }
 
     const teaching = new THREE.Mesh(
       new THREE.BoxGeometry(4, 2.4, 2),
@@ -69,7 +103,32 @@
     sculpture.position.set(0, 1.4, 1.5);
     scene.add(sculpture);
 
-    const animate = () => {
+    const chair = new THREE.Group();
+
+const woodMaterial = new THREE.MeshStandardMaterial({ color: 0x8b5a2b });
+
+const seat = new THREE.Mesh(new THREE.BoxGeometry(1, 0.1, 1), woodMaterial);
+seat.position.y = 0.5;
+chair.add(seat);
+
+const back = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 0.1), woodMaterial);
+back.position.set(0, 1, -0.45);
+chair.add(back);
+
+const legPositions = [
+  [-0.45, 0.25, -0.45], [0.45, 0.25, -0.45],
+  [-0.45, 0.25, 0.45],  [0.45, 0.25, 0.45]
+];
+legPositions.forEach(pos => {
+  const leg = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.23, 0.05), woodMaterial);
+  leg.position.set(...pos);
+  chair.add(leg);
+});
+
+chair.position.set(0, 0, 0);
+scene.add(chair);
+
+ const animate = () => {
       requestAnimationFrame(animate);
       sculpture.rotation.y += 0.01;
       renderer.render(scene, camera);
