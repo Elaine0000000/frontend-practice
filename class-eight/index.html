@@ -13,9 +13,9 @@
       <a class="navbar-brand" href="#home">校园信息中心</a>
       <div class="navbar-nav">
         <a class="nav-link active" href="#home">首页</a>
-        <a class="nav-link" href="#rooms">自习室</a>
+        <a class="nav-link" href="rooms.html">自习室</a>
         <a class="nav-link" href="#stats">使用统计</a>
-        <a class="nav-link" href="three-d/scene.html">校园三维</a>
+        <a class="nav-link" href="scene.html">校园三维</a>
       </div>
     </div>
   </nav>
@@ -24,39 +24,15 @@
     <section id="home" class="mb-4">
       <h1 class="h3">校园公共信息与数据展示中心（迷你版）</h1>
       <p class="text-muted">课堂作业八教师案例 · 数据来源：课程统一数据集</p>
+      <h3>图书馆自习空间介绍</h3>
+      <p>为了满足同学们不同的学习需求，学校在多个楼栋设有自习空间，涵盖楠苑、梓苑、图书馆、理科楼和文科楼，共 12 间自习室，总座位数超过 1100 个。</p>
+      <p>楠苑设有三间自习室，一楼和二楼各提供 120 和 96 个座位，开放时间为 08:00-22:30；三楼为研讨自习室，座位 48 个，开放时间稍短，为 09:00-21:00。</p>
+      <p>梓苑一楼自习室有 140 个座位，08:00-22:30 开放；二楼自习室目前处于维修状态，暂停开放。</p>
+      <p>图书馆一楼和二楼自习区分别有 160 和 130 个座位，开放时间最长，为 07:30-23:00；三楼静音自习室座位 60 个，08:00-22:00 开放。</p>
+      <p>理科楼一层设有通宵自习室，80 个座位，全天开放，三层自习室目前闭馆。</p>
+      <p>文科楼二层自习室有 66 个座位，08:00-22:00 开放；四层考研自习室座位 110 个，开放时间最早、结束最晚，为 07:00-23:30，适合备考冲刺的同学。</p>
+      <p>同学们可根据自己的作息和需求，选择合适的学习空</p>
       <div class="row g-3" id="summary-cards"></div>
-    </section>
-
-    <section id="rooms" class="mb-4">
-      <h2 class="h5">自习室查询</h2>
-      <div class="row g-2 mb-3">
-        <div class="col-auto">
-          <label for="floor-filter" class="form-label">楼层</label>
-          <select id="floor-filter" class="form-select">
-            <option value="all">全部</option>
-            <option value="1">1层</option>
-            <option value="2">2层</option>
-            <option value="3">3层</option>
-            <option value="4">4层</option>
-          </select>
-        </div>
-        <div class="col-auto">
-          <label for="status-filter" class="form-label">状态</label>
-          <select id="status-filter" class="form-select">
-            <option value="all">全部</option>
-            <option value="开放">开放</option>
-            <option value="闭馆">闭馆</option>
-            <option value="维修">维修</option>
-          </select>
-        </div>
-      </div>
-      <ul id="room-list" class="list-group"></ul>
-    </section>
-
-    <section id="stats" class="mb-4">
-      <h2 class="h5">使用统计（各自习室空余座位）</h2>
-      <p id="status" class="alert alert-warning" style="display:none"></p>
-      <div id="usage-chart" style="height:360px"></div>
     </section>
   </main>
 
