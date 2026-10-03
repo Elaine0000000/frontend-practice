@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>校园信息中心（迷你版）</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-md bg-body-tertiary mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="#home">食堂菜品统计</a>
+      <div class="navbar-nav">
+        <a class="nav-link active" href="#home">首页</a>
+        <a class="nav-link" href="canteen.html">食堂人数与分布</a>
+        <a class="nav-link" href="foods.html">菜品统计</a>
+        <a class="nav-link" href="scene.html">三维</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section id="home" class="mb-4">
+      <h1 class="h3">食堂菜品统计</h1>
+      <p class="text-muted">期末大作业之我真的不知道写什么了所以来纪念一下我上次没排到的玫瑰宴菜品</p>
+      <div class="row g-3" id="summary-cards"></div>
+    </section>
+  </main>
+
+  <footer class="text-center text-muted py-4">
+    食堂菜品统计，好想吃饭啊为什么国庆我爱吃的几家都关了。
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
